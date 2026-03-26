@@ -17,12 +17,12 @@
   --position-size: 40px;
 
   --phone-x: 871px;
-  --phone-y: 399px;
+  --phone-y: 400px;
   --phone-size: 36px;
 
   --email-x: 871px;
-  --email-y: 548px;
-  --email-size: 41px;
+  --email-y: 551px;
+  --email-size: 39px;
 }
 
 * {
