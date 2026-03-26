@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Card Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="preview-panel">
+      <h1 class="panel-title">Card Preview</h1>
+      <div class="card-canvas" id="cardCanvas" aria-label="Business card preview">
+        <img src="cartOrgenal.png" alt="Business card background" class="card-bg" />
+
+        <div class="text-overlay" id="textOverlay">
+          <p class="card-name" id="cardName"></p>
+          <p class="card-position" id="cardPosition"></p>
+          <p class="card-phone" id="cardPhone">(+966)</p>
+          <p class="card-email" id="cardEmail"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-panel">
+      <h2 class="panel-title">Fill Your Details</h2>
+
+      <form id="cardForm" class="form" autocomplete="off">
+        <label class="field">
+          <span>Name</span>
+          <input id="nameInput" type="text" maxlength="45" placeholder="Enter full name" />
+        </label>
+
+        <label class="field">
+          <span>Position</span>
+          <input id="positionInput" type="text" maxlength="40" placeholder="Enter position" />
+        </label>
+
+        <label class="field">
+          <span>Phone</span>
+          <div class="phone-wrap">
+            <span class="phone-prefix">(+966)</span>
+            <input id="phoneInput" type="tel" inputmode="numeric" maxlength="9" placeholder="5XXXXXXXX" />
+          </div>
+        </label>
+
+        <label class="field">
+          <span>Email</span>
+          <input id="emailInput" type="email" maxlength="60" placeholder="Enter email" />
+        </label>
+      </form>
+
+      <div class="actions">
+        <button type="button" id="downloadBtn" class="action-btn" title="Download card">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M12 3v11m0 0l4-4m-4 4l-4-4M4 17v2h16v-2" />
+            </svg>
+          </span>
+          Download
+        </button>
+
+        <button type="button" id="shareBtn" class="action-btn" title="Share card">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M22 2L11 13" />
+              <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+            </svg>
+          </span>
+          Share
+        </button>
+
+        <button type="button" id="resetBtn" class="action-btn" title="Reset fields">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M3 12a9 9 0 101.9-5.5M3 4v4h4" />
+            </svg>
+          </span>
+          Reset
+        </button>
+      </div>
+
+      <p class="hint" id="hintText">Tip: fill the fields and the card updates instantly.</p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
